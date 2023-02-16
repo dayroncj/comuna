@@ -1,76 +1,360 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<style>
-		body {
-			margin: 0;
-		}
-	
-		iframe{
-			border: 0;
-			width: 100%;
-			height: 100%;
-		}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-		#btnModal {
-			position: fixed;
-			top: 10px;
-			right: 10px;
-		}
-	</style>		
-	<link rel="icon" type="image/x-icon" href="https://www.uniandes.edu.co/sites/default/files/favicon.ico">
-	<title>Visualización y documentación para narrar a un equipo de trabajo</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">	
+  <title>Comparación global de salarios</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="https://www.uniandes.edu.co/sites/default/files/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="./assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <iframe width="600" height="412" src="https://lookerstudio.google.com/embed/reporting/6b1af3d0-3f33-4739-a895-0c3279e3aa09/page/NaN1" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-	<!-- Button trigger modal -->
-	<button type="button" id="btnModal" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-		Mostrar documentación
-	</button>
-	
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog modal-lg" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-			</div>
-			<div class="modal-body">
-				<h4>Text in a modal</h4>
-				<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-	  
-				<h4>Popover in a modal</h4>
-				<p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
-	  
-				<h4>Tooltips in a modal</h4>
-				<p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
-	  
-				<hr>
-	  
-				<h4>Overflowing text to show scroll behavior</h4>
-				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-			</div>
-			<div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-		</div>
-	</div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
 
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+      <a href="index.html" class="logo"><img src="https://educacion.uniandes.edu.co/sites/default/files/Uniandes.png" alt="" class="img-fluid"></a>
+      <!-- Uncomment below if you prefer to use text as a logo -->
+      <!-- <h1 class="logo"><a href="index.html">Butterfly</a></h1> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#results">Resultados</a></li>
+          <li class="dropdown"><a  class="nav-link  scrollto" href="#documentation"><span>Documentación</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#fields">Campos</a></li>
+              <li><a href="#other_fields">Nuevos campos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Init Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>Comparación global de salarios</h1>
+          <h2>Descubre los sueldos promedio de diferentes profesionales en Estados Unidos en áreas como negocios, tecnología, salud y más, con los datos recopilados por Ask a Manager</h2>
+          <div><a href="#results" class="btn-get-started scrollto">Iniciemos</a></div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
+          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Counts Section ======= -->
+    <section id="results" class="counts">
+      <div class="container">
+
+        <div class="text-center title">
+          <h3>Resultados de encuesta</h3>
+        </div>
+
+        <div class="row counters position-relative">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="83" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Paises</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1407" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Ciudades</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0"
+            data-purecounter-end="346100000"
+            data-purecounter-duration="1"
+            data-purecounter-currency="$"
+            data-purecounter-decimal="1"
+             class="purecounter"></span>
+            <p>Promedio ingreso anual</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="25355" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Total encuestas</p>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="row  position-relative">
+          <div class="col-12"><iframe width="100%" height="800px" src="https://lookerstudio.google.com/embed/reporting/b6bfbb77-f535-4576-b276-1e962db04f96/page/bkcR" frameborder="0" style="border:0" allowfullscreen></iframe></div>          
+        </row>
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Documentatio Section ======= -->
+    <div id="documentation">
+      <section id="clients" class="clients">
+        <div class="container">
+  
+          <div class="section-title" style="padding-bottom: 0;">
+            <h2 style="font-size: 37px;">Documentación</h1>
+          </div>
+        </div>
+      </section><!-- End Clients Section -->
+  
+      <!-- ======= Services Section ======= -->
+      <section id="fields" class="fields section-bg">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Campos</h2>
+            <p>Los datos recopilados por Ask a Manager son capturados usando un formulario de Google Forms que presenta la siguiente estructura de datos.</p>
+          </div>
+  
+          <div class="row">
+            <div class="col-12">
+              <table class="table table-striped">
+                <thead>
+                  <th scope="col">Campo</th>
+                  <th scope="col">Alias</th>
+                  <th scope="col" style="width: 125px;">Tipo de dato</th>
+                  <th scope="col">Descripción</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>How old are you?</td>
+                    <td>edad</td>
+                    <td>Texto</td>
+                    <td>Rango de edad</td>
+                  </tr>
+                  <tr>
+                    <td>What is your annual salary? (You'll indicate the currency in a later question. If you are part-time or hourly, please enter an annualized equivalent -- what you would earn if you worked the job 40 hours a week, 52 weeks a year.)</td>
+                    <td>salario_anual</td>
+                    <td>Decimal</td>
+                    <td>El salario anual. Si el usuario trabaja por horas o tiempo parcial se indica el equivalente anual.
+                  </tr>
+                  <tr>
+                    <td>What city do you work in?</td>
+                    <td>ciudad</td>
+                    <td>Texto</td>
+                    <td>Ciudad en la que el usuario trabaja</td>
+                  </tr>
+                  <tr>
+                    <td>What country do you work in?</td>
+                    <td>pais</td>
+                    <td>Texto</td>
+                    <td>País en el que el usuario trabaja</td>
+                  </tr>
+                  <tr>
+                    <td>Please indicate the currency</td>
+                    <td>moneda</td>
+                    <td>Texto</td>
+                    <td>Moneda en la que se encuentra el salario</td>
+                    <td></td>
+                    </tr>
+                  <tr>
+                  <td>If "Other," please indicate the currency here:</td>
+                    <td>otra_moneda</td>
+                    <td>Texto</td>
+                    <td>Moneda en la que se encuentra el salario diferente a las opciones del formulario</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Timestamp</td>
+                    <td>fecha</td>
+                    <td>Fecha-Hora</td>
+                    <td>Fecha y hora que la encuesta fue completada</td>
+                  </tr>
+                  <tr>
+                    <td>What is your highest level of education completed?</td>
+                    <td>nivel_educacion</td>
+                    <td>Texto</td>
+                    <td>Nivel de escolaridad alcanzado por el usuario</td>
+                  </tr>
+                  <tr>
+                    <td>How much additional monetary compensation do you get, if any (for example, bonuses or overtime in an average year)? Please only include monetary compensation here, not the value of benefits.</td>
+                    <td>monto_beneficios</td>
+                    <td>Decimal</td>
+                    <td>Monto de beneficios adicionales</td>
+                  </tr>
+                  <tr>
+                    <td>How many years of professional work experience do you have in your field?</td>
+                    <td>experiencia_en_campo</td>
+                    <td>Texto</td>
+                    <td>Rango de experiencia del usuario en el campo</td>
+                  </tr>
+                  <tr>
+                    <td>How many years of professional work experience do you have overall?</td>
+                    <td>experiencia</td>
+                    <td>Texto</td>
+                    <td>Años de experiencia del usuario</td>
+                  </tr>
+                  <tr>
+                    <td>What is your gender?</td>
+                    <td>genero</td>
+                    <td>Texto</td>
+                    <td>Género del usuario</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>If your income needs additional context, please provide it here:</td>
+                    <td>contexto_ingreso</td>
+                    <td>Texto</td>
+                    <td>Comentarios adicinales sobre el ingreso</td>
+                  </tr>
+                  <tr>
+                    <td>What industry do you work in?</td>
+                    <td>industria</td>
+                    <td>Texto</td>
+                    <td>Industria en la que desempeña</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>If your job title needs additional context, please clarify here:</td>
+                    <td>job_context</td>
+                    <td>Texto</td>
+                    <td>Comentario adicional sobre el cargo</td>
+                  </tr>
+                  <tr>
+                    <td>Job title</td>
+                    <td>nombre_cargo</td>
+                    <td>Texto</td>
+                    <td>Cargo del usuario</td>
+                  </tr>
+                  <tr>
+                    <td>What is your race? (Choose all that apply.)</td>
+                    <td>raza</td>
+                    <td>Texto</td>
+                    <td>Raza del usuario</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>If you're in the U.S., what state do you work in?</td>
+                    <td>estado</td>
+                    <td>Texto</td>
+                    <td>Estado si el usuario es de Estados Unidos</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>        
+        </div>
+      </section><!-- End Services Section -->
+  
+      <!-- ======= Portfolio Section ======= -->
+      <section id="other_fields" class="services">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Nuevos campos</h2>
+            <p>Con el fin de estandarizar y limpiar información existente en la data cruda obtenida desde el formulario se crean campos que permiten un mejor análisis</p>
+          </div>
+  
+          
+          <div class="row">
+            <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-globe" style="color: #86b6ff;"></i></div>
+                <h4 class="title">pais_unificado</h4>
+                <p class="description">Se estandariza y unifica las versiones de los nombres para cada país.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-globe" style="color: #4680ff;"></i></div>
+                <h4 class="title">ciudad_unificada</h4>
+                <p class="description">Se estandariza y unifica las versiones de los nombres para ciudad.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-cash-stack" style="color: #3fcdc7;"></i></div>
+                <h4 class="title">salario_anual_cop</h4>
+                <p class="description">Equivalente en pesos colombianos del salario anual.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-cash-stack" style="color: #3fcdc7;"></i></div>
+                <h4 class="title">monto_beneficios_cop</h4>
+                <p class="description">Equivalente en pesos colombianos del monto de los beneficios adicionales.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-cash-stack" style="color: #3fcdc7;"></i></div>
+                <h4 class="title">total_ingresos</h4>
+                <p class="description">Sumatoria de los campos salario_anual_cop y monto_beneficios_cop.</p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Portfolio Section -->
+  
+      <!-- ======= Team Section ======= -->
+      <section id="team" class="portfolio section-bg">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>.</h2>
+            <p>.</p>
+          </div>
+  
+          <div class="row">
+  
+            
+  
+          </div>
+  
+        </div>
+      </section><!-- End Team Section -->
+    </div>
+    
+
+
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
