@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudad unificada</title>
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/storytelling/dashboard2/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/storytelling/dashboard2/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/storytelling/dashboard2/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/storytelling/dashboard2/assets/css/style.css" rel="stylesheet">
+</head>
+<body class="container">
+    <div class="row" id="content">
+        <div class="col-12" >
+          <p>
+            <b>Atributo: </b>ciudad_unificada | <b>Tipo: </b>Texto/Lugar 
+          </p>
+          <p>
+            <b>Descripción: </b>Se estandariza y unifica las versiones de los nombres para cada ciudad.
+          </p>
+          <br>
+          <p>
+            Con el fin de detectar y unificar los diferentes nombres usados para las ciudades
+            <a href="https://datahub.io/core/world-cities/r/world-cities.csv"> world-cities.csv </a>
+            de <a href="https://datahub.io">https://datahub.io</a> lo cual me permite estandarizar como llamamos a las ciudades.
+          </p>
+          <p>
+            <code>
+              ciudades_mundo = pd.read_csv('https://datahub.io/core/world-cities/r/world-cities.csv')<br>
+              ciudades = ciudades_mundo.name.unique()<br>
+              <br>
+              ciudades_minuscula = np.char.lower(np.array([x.lower() if isinstance(x, str) else x for x in cities]))<br>
+              ciudades_minuscula = np.unique(ciudades_minuscula)<br>
+              <br>
+              df['ciudad_unificada'] = [c.title() if c in ciudades_minuscula else 'Other' for c in df.ciudad.str.lower()]<br>
+              df['ciudad_unificada'].unique()<br>
+            </code>
+          </p>              
+        </div>
+      </div>
+</body>
+</html>

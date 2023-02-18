@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edad Orden</title>
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/storytelling/dashboard2/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/storytelling/dashboard2/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/storytelling/dashboard2/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/storytelling/dashboard2/assets/css/style.css" rel="stylesheet">
+</head>
+<body class="container">
+    <div class="row" id="content">
+        <div class="col-12" >
+          <p>
+            <b>Atributo: </b>edad_nombre | <b>Tipo: </b>Entero 
+          </p>
+          <p>
+            <b>Descripción: </b>Valor que permite ordenar dar un orden a los rangos que describen la edad.
+          </p>
+          <br>
+          <p>
+            Esta variable es creada con propósitos establecer un orden a los rangos de edad y con ello mejorar la visualización. Por este motivo se crea este atributo usando el <i>resource manager</i> de <i>looker studio</i>:            
+          </p>
+          <p>
+            <b>Pasos para crear campo:</b>            
+          </p>
+          <p>
+            <b>1.</b> Ir a la opción <i>Manage added data sources</i>
+            <img height="220px" src="/storytelling/dashboard2/assets/img/edad_orden/step1.jpg" alt="step1" class="img-step">
+          </p>
+          <br>
+          <p>
+            <b>2.</b> Click en el <i>EDIT</i>
+            <img width="1000px" src="/storytelling/dashboard2/assets/img/edad_orden/step2.jpg" alt="step2" class="img-step">
+          </p>
+          <br>
+          <p>
+            <b>3.</b> Agregar un nuevo campo
+            <img width="500px" src="/storytelling/dashboard2/assets/img/edad_orden/step3.jpg" alt="step3" class="img-step">
+          </p>
+          <br>
+          <p>
+            <b>4.</b> Competar los campos <i>Field Name</i> y <i>Formula</i>
+            <img height="250px" src="/storytelling/dashboard2/assets/img/edad_orden/step4.jpg" alt="step4" class="img-step">
+            Formula:<br>
+            <code>
+              CASE
+              WHEN edad IN ("under 18") THEN 1
+              WHEN edad IN ("18-24") THEN 2
+              WHEN edad IN ("25-34") THEN 3
+              WHEN edad IN ("35-44") THEN 4
+              WHEN edad IN ("45-54") THEN 5
+              WHEN edad IN ("55-64") THEN 6
+              WHEN edad IN ("65 or over") THEN 7
+              ELSE 0
+              END
+            </code>
+          </p>
+          <br>
+          <p>
+            <b>5.</b> Para finalizar de click en el botón <i>DONE</i>
+          </p>
+        </div>        
+      </div>
+</body>
+</html>

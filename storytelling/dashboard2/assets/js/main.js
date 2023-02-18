@@ -2,6 +2,29 @@
 (function() {
   "use strict";
 
+  const modals = {
+    pais_unificado: {
+      name: 'Pais Unificado',
+      el: null
+    },
+    ciudad_unificada: {
+      name: 'Ciudad Unificada',
+      el: null
+    },
+    salario_anual_cop: {
+      name: 'Salario Anual COP',
+      el: null
+    },
+    monto_beneficio_cop: {
+      name: 'Monto Beneficio COP',
+      el: null
+    },
+    edad_orden: {
+      name: 'Edad Orden',
+      el: null
+    }
+  }
+
   /**
    * Easy selector helper function
    */
@@ -33,6 +56,21 @@
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
+  }
+
+  
+  //Load modals
+  const loadModal = (name) => {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        var temp = document.createElement('div');
+        temp.innerHTML = xhr.response;
+        modals[name].el = temp.querySelector('#content');
+      }
+    };
+    xhr.open('GET', `/storytelling/dashboard2/assets/modals/${name}.html`, true);
+    xhr.send();
   }
 
   /**
@@ -122,6 +160,21 @@
     }
   }, true)
 
+  //Open modal
+  on('click', '[fm-modal]', function(e) {
+    e.preventDefault();
+    var el = e.target;
+    var modalName = el.getAttribute('fm-modal');
+    var modalObj = modals[modalName];
+    if(modalObj) {
+      document.getElementById('modalTitle').innerText = modalObj.name;
+      var modalBody = document.getElementById('modalBody');
+      modalBody.innerHTML = '';
+      modalBody.appendChild(modalObj.el);
+    }
+
+  }, true);
+
   /**
    * Scroll with ofset on page load with hash links in the url
    */
@@ -134,5 +187,7 @@
   });
 
   new PureCounter();
+
+  Object.keys(modals).forEach(m => loadModal(m));
 
 })()

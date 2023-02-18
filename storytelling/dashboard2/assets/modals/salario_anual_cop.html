@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario anual COP</title>
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/storytelling/dashboard2/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/storytelling/dashboard2/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/storytelling/dashboard2/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/storytelling/dashboard2/assets/css/style.css" rel="stylesheet">
+</head>
+<body class="container">
+    <div class="row" id="content">
+        <div class="col-12" >
+          <p>
+            <b>Atributo: </b>salario_anual_cop | <b>Tipo: </b>Decimal 
+          </p>
+          <p>
+            <b>Descripción: </b>Equivalente en pesos colombianos del salario anual.
+          </p>
+          <br>
+          <p>
+            Se crea este campo con el fin de unificar los valores en los diferentes salarios, 
+            haciendo las transformaciones de cada valor por su equivalente a pesos colombianos. Esta enformación fue obtenida de 
+            <a href="https://www.xe.com/currencyconverter/"> https://www.xe.com/currencyconverter/</a> el día 12 de febrero del 2023.            
+          </p>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-10">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Moneda</th>
+                <th>Valor en COP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>USD</td>
+                <td>4803.71</td>
+              </tr>
+              <tr>
+                <td>CAD</td>
+                <td>3586.98</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>5728.32</td>
+              </tr>
+              <tr>
+                <td>EUR</td>
+                <td>5119.48</td>
+              </tr>
+              <tr>
+                <td>AUD/NZD</td>
+                <td>3020.89</td>
+              </tr>
+              <tr>
+                <td>CHF</td>
+                <td>5187.32</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>457.31</td>
+              </tr>
+              <tr>
+                <td>JPY</td>
+                <td>36.40</td>
+              </tr>
+              <tr>
+                <td>ZAR</td>
+                <td>267.51</td>
+              </tr>
+              <tr>
+                <td>HKD</td>
+                <td>611.47</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-12">
+          <p>
+            Con esta información procedemos a convertir los valores de <i>salario_anual</i>.
+          </p>
+          <p>
+            <code>
+              valores_conversion = {'USD': 4803.71 , 'CAD': 3586.98, 'GBP': 5782.32, 'EUR': 5119.48, 'AUD/NZD': 3020.89, 'CHF': 5187.04, 'SEK': 457.31, 'JPY': 36.40, 'ZAR': 267.51, 'HKD': 611.47, 'Other': 0}
+              <br>
+              df_clean['salario_anual_cop'] = df_clean.apply(lambda row: row['salario_anual']*valores_conversion[row['moneda']], axis=1)              
+            </code>
+          </p>
+          <br>                
+        </div>
+      </div>
+</body>
+</html>

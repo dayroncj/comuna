@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body>   
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -63,7 +63,7 @@
           <div><a href="#results" class="btn-get-started scrollto">Iniciemos</a></div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="./assets/img/hero-img.png" class="img-fluid" alt="">
+          <img src="./dashboard2/assets/img/hero-img.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -258,11 +258,19 @@
                     <td>If you're in the U.S., what state do you work in?</td>
                     <td>estado</td>
                     <td>Texto</td>
-                    <td>Estado si el usuario es de Estados Unidos</td>
+                    <td>Si el usuario es de Estados Unidos, El estado en el cual trabaja.</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <br>
+              <p>Se utiliza pandas para obtener la información y asignarle su respectivo alias como indice.</p>
+              <p>
+                <code>
+                  <p>df = pd.read_excel('./Ask A Manager Salary Survey 2021.xlsx')</p>
+                  <p></p>df.columns = ['fecha', 'edad', 'industria', 'nombre_trabajo', 'contexto_trabajo', 'salario_anual', 'monto_beneficios', 'moneda', 'otra_moneda', 'contexto_ingreso', 'pais', 'estado', 'ciudad', 'experiencia_general', 'experiencia_en_campo', 'nivel_educacion', 'genero', 'raza']</p>
+                </code>
+              </p>
             </div>
           </div>        
         </div>
@@ -284,13 +292,15 @@
                 <div class="icon"><i class="bi bi-globe" style="color: #86b6ff;"></i></div>
                 <h4 class="title">pais_unificado</h4>
                 <p class="description">Se estandariza y unifica las versiones de los nombres para cada país.</p>
+                <p class="description"><a href="#" data-bs-toggle="modal" data-bs-target="#modalUnifiedCountry" fm-modal="pais_unificado">Ver detalles</a></p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-globe" style="color: #86b6ff;"></i></div>
                 <h4 class="title">ciudad_unificada</h4>
-                <p class="description">Se estandariza y unifica las versiones de los nombres para ciudad.</p>
+                <p class="description">Se estandariza y unifica las versiones de los nombres para cada ciudad.</p>
+                <p class="description"><a href="#" data-bs-toggle="modal" data-bs-target="#modalUnifiedCountry" fm-modal="ciudad_unificada">Ver detalles</a></p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -298,6 +308,7 @@
                 <div class="icon"><i class="bi bi-cash-stack" style="color: #3fcdc7;"></i></div>
                 <h4 class="title">salario_anual_cop</h4>
                 <p class="description">Equivalente en pesos colombianos del salario anual.</p>
+                <p class="description"><a href="#" data-bs-toggle="modal" data-bs-target="#modalUnifiedCountry" fm-modal="salario_anual_cop">Ver detalles</a></p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -305,13 +316,15 @@
                 <div class="icon"><i class="bi bi-cash-stack" style="color: #3fcdc7;"></i></div>
                 <h4 class="title">monto_beneficios_cop</h4>
                 <p class="description">Equivalente en pesos colombianos del monto de los beneficios adicionales.</p>
+                <p class="description"><a href="#" data-bs-toggle="modal" data-bs-target="#modalUnifiedCountry" fm-modal="monto_beneficios_cop">Ver detalles</a></p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-cash-stack" style="color: #3fcdc7;"></i></div>
-                <h4 class="title">total_ingresos</h4>
-                <p class="description">Sumatoria de los campos salario_anual_cop y monto_beneficios_cop.</p>
+                <div class="icon"><i class="bi bi-hash" style="color: #f58085;"></i></div>
+                <h4 class="title">edad_orden</h4>
+                <p class="description">Valor que permite ordenar dar un orden a los rangos que describen la edad.</p>
+                <p class="description"><a href="#" data-bs-toggle="modal" data-bs-target="#modalUnifiedCountry" fm-modal="edad_orden">Ver detalles</a></p>
               </div>
             </div>
           </div>
@@ -325,7 +338,7 @@
   
           <div class="section-title">
             <h2>.</h2>
-            <p>.</p>
+            <p></p>
           </div>
   
           <div class="row">
@@ -341,6 +354,27 @@
 
 
   </main><!-- End #main -->
+
+  
+  <!-- MODAlS -->
+  <!-- Unified country modal -->
+  <div class="modal " id="modalUnifiedCountry" tabindex="-1" aria-labelledby="modalUnifiedCountryLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalUnifiedCountryLabel"><b id="modalTitle"></b></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modalBody">            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End Unified country modal -->
 
   <!-- Vendor JS Files -->
   <script src="./dashboard2/assets/vendor/purecounter/purecounter_vanilla.js"></script>

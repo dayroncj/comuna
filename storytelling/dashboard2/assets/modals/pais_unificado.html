@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais unificado</title>
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/storytelling/dashboard2/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/storytelling/dashboard2/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/storytelling/dashboard2/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/storytelling/dashboard2/assets/css/style.css" rel="stylesheet">
+</head>
+<body class="container">
+    <div id="content">
+      <div class="row" >
+        <div class="col-12" >
+          <p>
+            <b>Atributo: </b>pais_unificado | <b>Tipo: </b>Texto/Lugar 
+          </p>
+          <p>
+            <b>Descripción: </b>Se estandariza y unifica las versiones de los nombres para cada país.
+          </p>
+          <br>
+          <p>
+            Con el fin de detectar y unificar los diferentes nombres de los paises se utiliza el fuente
+            <a href="https://datahub.io/core/world-cities/r/world-cities.csv"> world-cities.csv </a>
+            de <a href="https://datahub.io">https://datahub.io</a> lo cual me permite obtener los nombres genéricos.
+          </p>
+          <p>
+            <code>
+            ciudades_mundo = pd.read_csv('https://datahub.io/core/world-cities/r/world-cities.csv') <br>
+            paises = ciudades_mundo.country.unique() <br>
+            paises_no_unificados = df[~df.pais.isin(paises)] <br>
+            paises_no_unificados.sort_values(by=['pais'], ascending=True).pais.unique()
+            </code>
+          </p>
+          <p>
+            El código anterior me permite discriminar los siguientes los nombres para cada país.
+          </p>
+          <br>                
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th style="width: 150px;" scope="col">País</th>
+                <th scope="col">Nombres adicionales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>United States</td>
+                <td>'🇺🇸', 'u.s.', 'united states', 'us', 'america', 'the united states', 'the us', 'u. s', 'u. s.', 'u.a.', 'u.s', 'u.s.', 'u.s>', 'u.sa', 'ua', 'u.s.a.', 'usa', 'u.s.a', 'uxz', 'united y', 'united statss', 'uniteed states', 'usa (company is based in a us territory, i work remote)', 'usa-- virgin islands', 'usa, but for foreign gov't', 'uniited states', 'unite states', 'united states', 'united states of america', 'unites states', 'usa tomorrow', 'unitef stated', 'united states of american', 'united stares', 'united state', 'united state of america', 'united stated', 'united stateds', 'united states is america', 'unitedstates', ' U.S.', ' US', ' United States', 'For the United States government, but posted overseas', 'Hartford', 'u.s.', 'uS', 'uSA', 'united States', 'united stated', 'united states', 'united states ', 'united states of america', 'us', 'usa', 'usa ', '🇺🇸 ', 'California ', 'I work for a UAE-based organization, though I am personally in the US.', 'n/a (remote from wherever I want)', 'na', 'America', 'San Francisco', 'The US', 'The United States', 'U. S ', 'U. S.', 'U. S. ', 'U.A.', 'U.S', 'U.S.', 'U.S. ', 'U.S.A', 'U.S.A ', 'U.S.A.', 'U.S.A. ', 'U.S>', 'U.SA', 'U.s.', 'U.s.a.', 'UNITED STATES', 'UNited States', 'US', 'US ', 'US govt employee overseas, country withheld', 'US of A', 'USA', 'USA ', 'USA (company is based in a US territory, I work remote)', 'USA tomorrow ', 'USA, but for foreign gov't', 'Worldwide (based in US but short term trips aroudn the world)', 'USA-- Virgin Islands', 'USAB', 'USD', 'USS', 'USaa', 'United STates', 'United Sates', 'Uniited States', 'Unite States', 'United  States', 'United Sates of America', 'United Stares', 'United Stares ', 'United State', 'United State of America', 'United Statea', 'United Stated', 'United Stateds', 'United Statees', 'United States', 'United States ', 'United States (I work from home and my clients are all over the US/Canada/PR', 'United States Of America', 'United States is America', 'United States of America', 'United States of America ', 'United States of American', 'United States of American ', 'United States of Americas', 'United States of america', 'United States of america ', 'United Statesp', 'United Statss', 'United Stattes', 'United Statues', 'United Status', 'United Statws', 'United Sttes', 'United states', 'United states ', 'United states of America', 'UnitedStates', 'Virginia'</td>
+              </tr>
+              <tr>
+                <td>Argentina</td>
+                <td>'ARGENTINA BUT MY ORG IS IN THAILAND', 'I work for an US based company but I'm from Argentina.'</td>
+              </tr>
+              <tr>
+                <td>Austria</td>
+                <td>'Austria, but I work remotely for a Dutch/British company'</td>
+              </tr>
+              <tr>
+                <td>United Kingdom</td>
+                <td>'Britain ', 'ENGLAND', 'England', 'England ', 'England, Gb', 'England, UK', 'England, UK.', 'England, United Kingdom', 'England, United Kingdom ', 'England/UK', 'Englang', 'Great Britain', 'Great Britain ', 'uk', 'united kingdom', 'Scotland', 'Scotland ', 'Scotland, UK', 'U.K', 'U.K.', 'U.K. ', 'U.K. (northern England)', 'UA', 'UAE', 'UK', 'UK ', 'UK (England)', 'UK (Northern Ireland)', 'UK for U.S. company', 'UK, but for globally fully remote company', 'UK, remote', 'Northern Ireland', 'Northern Ireland ', 'Northern Ireland, United Kingdom', 'Ireland ', 'ireland', 'Uk', 'Uk ', 'england', 'United Kindom', 'United Kingdom', 'United Kingdom ', 'United Kingdom (England)', 'United Kingdom.', 'United Kingdomk', 'United kingdom', 'United kingdom ', 'Wales (United Kingdom)', 'Wales, UK', 'Wales'</td>
+              </tr>
+              <tr>
+                <td>Canada</td>
+                <td>'CANADA', 'CANADA ', 'Can', 'Canad', 'Canada', 'Canada ', 'Canada and USA', 'Canada, Ottawa, ontario', 'Canadw', 'Canadá', 'Canda', 'Csnada', 'I am located in Canada but I work for a company in the US', 'canada'</td>
+              </tr>
+              <tr>
+                <td>Republic of the Congo</td>
+                <td>'Congo'</td>
+              </tr>
+              <tr>
+                <td>China</td>
+                <td>'Mainland China'</td>
+              </tr>
+              <tr>
+                <td>Pakistan</td>
+                <td>'Company in Germany. I work from Pakistan.'</td>
+              </tr>
+              </tr>
+              <tr>
+                <td>Romania</td>
+                <td>'From Romania, but for an US based company'</td>
+              </tr>
+              </tr>
+              <tr>
+                <td>Italy</td>
+                <td>'Italy (South)'</td>
+              </tr>
+              </tr>
+              <tr>
+                <td>Japan</td>
+                <td>'Japan, US Gov position', 'japan', 'Japan '</td>
+              </tr>
+              </tr>
+              <tr>
+                <td>Netherlands</td>
+                <td>'NL', 'NZ', 'Nederland', 'netherlands', 'the Netherlands', 'the netherlands', 'Netherlands ', 'The Netherlands', 'The Netherlands ', 'The netherlands'</td>
+              </tr>
+              </tr>
+              <tr>
+                <td>New Zealand</td>
+                <td>' New Zealand', 'Aotearoa New Zealand', 'From New Zealand but on projects across APAC', 'new zealand', 'New Zealand ', 'New Zealand Aotearoa', 'New zealand'</td>
+              </tr>
+              </tr>
+              <tr>
+                <td>Puerto Rico</td>
+                <td>'United States- Puerto Rico'</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    Se crea una copia del la columna <i>pais</i>.
+                    <code>df['pais_unificado'] = df['pais']</code>
+                </p>
+                <p>
+                    Ya con estos datos podemos usar el siguiente comando para modificar el dataframe. 
+                    <code>df['pais_unificado'].mask(df.pais.isin([LISTA_NOMBRES_ALTERNOS), [NOMBRE_PAIS], inplace=True)</code>
+                    <br>
+                    <br>
+                    Ejemplo: <code>df['pais_unificado'].mask(df.pais.isin(['Japan, US Gov position', 'japan', 'Japan ']), 'Japan', inplace=True)</code>
+                </p>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
